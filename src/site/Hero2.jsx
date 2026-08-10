@@ -112,8 +112,11 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
         </h1>
         <div className={"z6-hero2-foot" + (go ? " run" : "")}>
           <p className="z6-hero2-sub">
-            School-based hoops built by pros. Real coaching, real courts — taking the
-            next generation of Sydney from the court to the stars.
+            <span className="z6-hero2-sub-lead">Professional basketball development, delivered
+            inside schools across Western Sydney.</span>{" "}
+            Led by NBL1 pro <strong className="z6-hero2-sub-name">Gum Majak</strong> — building
+            the skill, discipline and confidence to take the next generation from the court to
+            the stars.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Button size="lg" onClick={() => { setCta("Book a School Program (hero)"); onNav("register"); }}>Book a School Program</Button>
