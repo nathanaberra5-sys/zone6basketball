@@ -1,0 +1,73 @@
+/* ── Zone6Basketball — Colour tokens ───────────────────────────── */
+:root {
+  /* Base palette */
+  --z6-green: #39FF14;        /* Zone Green — the hero accent */
+  --z6-green-dim: #2BC40F;    /* pressed / darker green */
+  --z6-green-deep: #1E8A0A;   /* deepest green */
+  --z6-black: #0A0A0A;        /* Deep Black — dominant background */
+  --z6-charcoal: #1A1A1A;     /* Charcoal — raised surfaces */
+  --z6-charcoal-2: #111111;   /* near-black — alt rows, sunk surfaces */
+  --z6-silver: #C0C0C0;       /* Steel Silver — secondary type, wordmark */
+  --z6-silver-dim: #8A8A8A;   /* muted silver */
+  --z6-white: #FFFFFF;
+
+  /* Green tints / glows (green is ONLY ever an accent, never a fill bg) */
+  --z6-green-08: rgba(57, 255, 20, 0.08);
+  --z6-green-15: rgba(57, 255, 20, 0.15);
+  --z6-green-25: rgba(57, 255, 20, 0.25);
+  --z6-green-40: rgba(57, 255, 20, 0.40);
+  --z6-silver-15: rgba(192, 192, 192, 0.15);
+  --z6-silver-25: rgba(192, 192, 192, 0.25);
+
+  /* ── Semantic aliases — DARK theme (default: digital, social, merch) ── */
+  --bg-base: var(--z6-black);
+  --bg-deep: #050505;
+  --surface-card: var(--z6-charcoal);
+  --surface-raised: #202020;
+  --surface-sunk: var(--z6-charcoal-2);
+  --surface-row-alt: var(--z6-charcoal-2);
+
+  --text-primary: var(--z6-white);
+  --text-secondary: var(--z6-silver);
+  --text-muted: var(--z6-silver-dim);
+  --text-accent: var(--z6-green);
+
+  --accent: var(--z6-green);
+  --accent-hover: #5BFF3D;
+  --accent-press: var(--z6-green-dim);
+
+  --border-subtle: var(--z6-silver-15);
+  --border-strong: var(--z6-silver-25);
+  --border-accent: var(--z6-green-40);
+
+  /* Feedback */
+  --success: var(--z6-green);
+  --warning: #FFC400;
+  --danger: #FF4438;
+  --info: #3DA5FF;
+}
+
+/* ── LIGHT theme scope (school letters, proposals, reports) ──
+   Apply class="z6-light" on a container to flip to the light treatment.
+   Avoid large Zone Green fills here — green is for text/borders/markers. */
+.z6-light {
+  --bg-base: #FFFFFF;
+  --bg-deep: #F4F4F4;
+  --surface-card: #FFFFFF;
+  --surface-raised: #FAFAFA;
+  --surface-sunk: #F4F4F4;
+  --surface-row-alt: #F4F4F4;
+
+  --text-primary: #111111;
+  --text-secondary: #3A3A3A;
+  --text-muted: #6A6A6A;
+  --text-accent: var(--z6-green-deep);
+
+  --accent: var(--z6-green-deep);
+  --accent-hover: #1E8A0A;
+  --accent-press: #14660A;
+
+  --border-subtle: rgba(17, 17, 17, 0.10);
+  --border-strong: rgba(17, 17, 17, 0.18);
+  --border-accent: rgba(30, 138, 10, 0.45);
+}

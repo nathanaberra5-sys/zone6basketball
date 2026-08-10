@@ -1,0 +1,28 @@
+/* ── Zone6Basketball — Effects: glows, shadows, borders, motion ── */
+:root {
+  /* Neon glow — the signature Zone Green halo. Used on accents/CTAs/headlines. */
+  --glow-green-sm: 0 0 8px rgba(57, 255, 20, 0.45);
+  --glow-green-md: 0 0 18px rgba(57, 255, 20, 0.50);
+  --glow-green-lg: 0 0 36px rgba(57, 255, 20, 0.55);
+  --glow-text-green: 0 0 12px rgba(57, 255, 20, 0.65);
+
+  /* Elevation shadows (deep, cinematic — sit on near-black) */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+  /* Card border treatment */
+  --card-border: 1px solid var(--border-subtle);
+  --card-border-accent: 1px solid var(--border-accent);
+
+  /* Motion — quick, punchy, athletic. No slow fades. */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);      /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);   /* @kind other */
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);   /* @kind other */
+  --dur-fast: 120ms;   /* @kind other */
+  --dur-base: 200ms;   /* @kind other */
+  --dur-slow: 320ms;   /* @kind other */
+
+  /* Decorative diagonal — lightning/court energy (use sparingly for accents) */
+  --skew-energy: -8deg;   /* @kind other */
+}
