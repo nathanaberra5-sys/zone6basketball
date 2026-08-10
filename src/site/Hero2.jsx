@@ -2,13 +2,11 @@ import React from "react";
 import Button from "../ds/Button.jsx";
 import { setCta } from "../lib/scroll.js";
 import heroVideo from "../assets/hero-cinematic.mp4";
-import heroPoster from "../assets/hero-poster.jpg";
+import heroPoster from "../assets/hero-cinematic-poster.png";
 
 // Hero2 — full-bleed cinematic video with monumental type + scroll parallax.
-// The Higgsfield loop needs no trimming: native `loop` wraps it, and the
-// guard below never fires with these bounds.
-const H2_LOOP_START = 0;
-const H2_LOOP_END = 999;
+const H2_LOOP_START = 0.15;
+const H2_LOOP_END = 10.3;
 
 function Z6Video({ style }) {
   const ref = React.useRef(null);
