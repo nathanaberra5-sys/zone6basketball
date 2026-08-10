@@ -104,7 +104,7 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
       </div>
 
       <div className="z6-hero2-inner" ref={typeRef}>
-        <p className="z6-cond z6-hero2-kicker">School basketball program<br />Western Sydney · Ages 6–19</p>
+        <p className="z6-cond z6-hero2-kicker">School basketball program<br />Sydney based · NSW wide · Ages 6–19</p>
         <h1 className={"z6-display z6-hero2-h" + (go ? " run" : "")}>
           <span className="z6-h2line" style={{ ["--d"]: "0ms" }}><span className="z6-outline">OUT&nbsp;OF&nbsp;THIS</span></span>
           <span className="z6-h2line" style={{ ["--d"]: "110ms" }}><span style={{ color: "var(--z6-white)" }}>WORLD</span></span>
@@ -112,11 +112,10 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
         </h1>
         <div className={"z6-hero2-foot" + (go ? " run" : "")}>
           <p className="z6-hero2-sub">
-            <span className="z6-hero2-sub-lead">Professional basketball development, delivered
-            inside schools across Western Sydney.</span>{" "}
-            Led by NBL1 pro <strong className="z6-hero2-sub-name">Gum Majak</strong> — building
-            the skill, discipline and confidence to take the next generation from the court to
-            the stars.
+            <span className="z6-hero2-sub-lead">Professional basketball development in
+            schools — Sydney based, NSW wide.</span>{" "}
+            Led by NBL1 pro <strong className="z6-hero2-sub-name">Gum Majak</strong>.
+            Skill, discipline and confidence — from the court to the stars.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Button size="lg" onClick={() => { setCta("Book a School Program (hero)"); onNav("register"); }}>Book a School Program</Button>

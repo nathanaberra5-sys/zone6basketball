@@ -5,16 +5,15 @@ import gumCoaching from "../assets/gum-coaching.jpg";
 import coachHuddle from "../assets/coach-huddle.jpg";
 import teamRedeyes from "../assets/team-redeyes.jpg";
 import sideline from "../assets/sideline.jpg";
-import reddamTeam from "../assets/reddam-team.jpg";
 
 // Filmstrip — horizontal scroll-snap strip of court photos.
+// (The team photo lives in the Founder section — not repeated here.)
 export default function Filmstrip() {
   const slots = [
     { id: "g1", src: gumCoaching, ph: "Coaching session", cap: "COACHING" },
     { id: "g2", src: coachHuddle, ph: "Talking it through", cap: "THE HUDDLE" },
     { id: "g3", src: teamRedeyes, ph: "The squad", cap: "THE SQUAD" },
     { id: "g4", src: sideline, ph: "Game day", cap: "GAME DAY" },
-    { id: "g5", src: reddamTeam, ph: "Team photo", cap: "TEAM" },
   ];
   const ref = React.useRef(null);
   const nudge = (dir) => {
