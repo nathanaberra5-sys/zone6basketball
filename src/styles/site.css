@@ -58,6 +58,7 @@
   .z6i-skip { position:absolute; bottom:26px; right:32px; z-index:2; font-family:var(--font-condensed); font-weight:600;
     font-size:11px; letter-spacing:0.24em; color:var(--text-muted);
     opacity:0; animation:z6iFadeIn 0.5s ease 1.1s forwards; }
+  .z6i.exit .z6i-skip { animation:none; opacity:0; transition:opacity 0.15s ease; }
   @keyframes z6iFadeIn { to { opacity:1; } }
 
   /* ════ TOPBAR + NAV ════ */
