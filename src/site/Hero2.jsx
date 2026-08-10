@@ -2,11 +2,13 @@ import React from "react";
 import Button from "../ds/Button.jsx";
 import { setCta } from "../lib/scroll.js";
 import heroVideo from "../assets/hero-cinematic.mp4";
-import heroPoster from "../assets/hero-cinematic-poster.png";
+import heroPoster from "../assets/hero-poster.jpg";
 
 // Hero2 — full-bleed cinematic video with monumental type + scroll parallax.
-const H2_LOOP_START = 0.15;
-const H2_LOOP_END = 10.3;
+// The Higgsfield loop needs no trimming: native `loop` wraps it, and the
+// guard below never fires with these bounds.
+const H2_LOOP_START = 0;
+const H2_LOOP_END = 999;
 
 function Z6Video({ style }) {
   const ref = React.useRef(null);
@@ -97,13 +99,14 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
       <div className={"z6-hero2-meta" + (go ? " run" : "")}>
         <span>SYDNEY&nbsp; 33.87°S&nbsp;151.21°E</span>
         <span className="z6-hide-mobile">SECTOR&nbsp;06</span>
-        <span>AGES&nbsp;6–19</span>
+        <span className="z6-hide-mobile">AGES&nbsp;6–19</span>
         <span className="z6-hide-mobile" style={{ display: "inline-flex", alignItems: "center", gap: 7 }}>
           <span className="z6-rec-dot"></span>ENROLLING&nbsp;NOW
         </span>
       </div>
 
       <div className="z6-hero2-inner" ref={typeRef}>
+        <p className="z6-cond z6-hero2-kicker">School basketball program<br />Western Sydney · Ages 6–19</p>
         <h1 className={"z6-display z6-hero2-h" + (go ? " run" : "")}>
           <span className="z6-h2line" style={{ ["--d"]: "0ms" }}><span className="z6-outline">OUT&nbsp;OF&nbsp;THIS</span></span>
           <span className="z6-h2line" style={{ ["--d"]: "110ms" }}><span style={{ color: "var(--z6-white)" }}>WORLD</span></span>

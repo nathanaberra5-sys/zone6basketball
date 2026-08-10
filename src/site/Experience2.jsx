@@ -3,6 +3,7 @@ import coachHuddle from "../assets/coach-huddle.jpg";
 import gumCoaching from "../assets/gum-coaching.jpg";
 import teamRedeyes from "../assets/team-redeyes.jpg";
 import sideline from "../assets/sideline.jpg";
+import ballPlanet from "../assets/ball-planet.jpg";
 
 // Experience2 — asymmetric editorial mosaic with oversized index numbers.
 function XTile({ n, img, title, desc, area }) {
@@ -41,7 +42,7 @@ export default function Experience2() {
         <XTile area="d" n="04" img={sideline} title="Real Game Time"
           desc="Competitive, supportive games every week." />
         <div className="z6-xmanifesto" style={{ gridArea: "e" }}>
-          {/* images/hf/ball-planet.jpg goes here (opacity 0.55, cover) once generated via Higgsfield */}
+          <img src={ballPlanet} alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 30%", opacity: 0.55 }} />
           <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,10,10,0.2), rgba(10,10,10,0.88))" }}></div>
           <p className="z6-cond" style={{ position: "relative" }}>SKILLS ARE BUILT.<br />
             <span>CONFIDENCE IS EARNED.</span><br />

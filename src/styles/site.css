@@ -146,6 +146,9 @@
     padding-bottom:clamp(44px,6vh,72px); transform:translateY(22px); transition:transform 0.75s var(--ease-out) 0.3s; }
   .z6-hero2-foot.run { transform:none; }
   .z6-hero2-sub { font-size:18px; line-height:1.55; color:var(--text-secondary); max-width:480px; margin:0; }
+  /* plain-English kicker above the headline — mobile only (owner request) */
+  .z6-hero2-kicker { display:none; }
+
   .z6-hero2-cue { position:absolute; bottom:0; left:50%; width:1px; height:52px; z-index:3; overflow:hidden; }
   .z6-hero2-cue span { position:absolute; left:0; top:0; width:1px; height:100%;
     background:linear-gradient(180deg, transparent, var(--z6-green)); animation:z6cue 1.8s ease-in-out infinite; }
@@ -293,6 +296,13 @@
     .z6-jstop:last-child { padding-bottom:0; }
     .z6-hero2-meta { gap:16px; }
     .z6-voices-mark { font-size:120px; top:-16px; }
+    /* tighter mobile hero: content starts under the meta strip instead of
+       sinking to the bottom of a near-full-screen block (owner request) */
+    .z6-hero2 { min-height:min(74vh, 660px); min-height:min(74svh, 660px); justify-content:flex-start; }
+    .z6-hero2-inner { padding-top:26px; }
+    .z6-hero2-foot { padding-bottom:34px; }
+    .z6-hero2-kicker { display:block; font-weight:700; font-size:13px; letter-spacing:0.16em;
+      text-transform:uppercase; color:var(--z6-green); text-shadow:var(--glow-text-green); margin:0 0 16px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .z6r, .z6-h2line, .z6-hero2-meta, .z6-hero2-foot { transform:none !important; transition:none !important; }

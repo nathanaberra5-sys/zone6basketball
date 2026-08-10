@@ -1,12 +1,13 @@
 import React from "react";
 import Badge from "../ds/Badge.jsx";
 import reddamTeam from "../assets/reddam-team.jpg";
+import nebula from "../assets/nebula.jpg";
 
 // Founder2 — Gum Majak band with monumental jersey number backdrop + pull quote.
 export default function Founder2() {
   return (
     <section id="founder" className="z6-sec z6-founder2">
-      {/* images/hf/nebula.jpg goes here (full-bleed, opacity 0.5) once generated via Higgsfield */}
+      <img src={nebula} alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5, pointerEvents: "none" }} />
       <span className="z6-display z6-founder2-num" aria-hidden="true">14</span>
       <div className="z6-founder2-grid">
         <div className="z6-founder2-photo">
