@@ -31,15 +31,17 @@ export default function Register() {
     if (data.get("botcheck")) { setStatus("done"); return; } // honeypot tripped — show success, send nothing
     const isPlayer = mode === "player";
     const name = isPlayer ? data.get("Player Name") : data.get("School Name");
+    // JSON key order sets the field order in the notification email:
+    // the enquirer's details first, then the enquiry meta.
     const payload = {
       access_key: FORM_ACCESS_KEY,
       subject: `Zone6 enquiry — ${isPlayer ? "Player/Parent" : "School"} — ${name}`,
       from_name: "Zone6 Basketball website",
       replyto: isPlayer ? data.get("Parent Email") : data.get("Email"),
-      "Enquiry type": isPlayer ? "Player / Parent" : "School",
-      "Came from": getCta(),
     };
     for (const [k, v] of data.entries()) if (k !== "botcheck" && v) payload[k] = v;
+    payload["Enquiry type"] = isPlayer ? "Player / Parent" : "School";
+    payload["Came from"] = getCta();
     if (!FORM_ACCESS_KEY) { setStatus("error"); return; }
     setStatus("sending");
     try {
