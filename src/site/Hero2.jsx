@@ -1,28 +1,11 @@
 import React from "react";
 import Button from "../ds/Button.jsx";
+import LoopVideo from "./LoopVideo.jsx";
 import { setCta } from "../lib/scroll.js";
 import heroVideo from "../assets/hero-cinematic.mp4";
 import heroPoster from "../assets/hero-cinematic-poster.png";
 
 // Hero2 — full-bleed cinematic video with monumental type + scroll parallax.
-const H2_LOOP_START = 0.15;
-const H2_LOOP_END = 10.3;
-
-function Z6Video({ style }) {
-  const ref = React.useRef(null);
-  React.useEffect(() => {
-    const v = ref.current;
-    if (!v) return;
-    const p = v.play(); if (p && p.catch) p.catch(() => {});
-    const onT = () => { if (v.currentTime >= H2_LOOP_END || v.currentTime < H2_LOOP_START) v.currentTime = H2_LOOP_START; };
-    v.addEventListener("timeupdate", onT);
-    return () => v.removeEventListener("timeupdate", onT);
-  }, []);
-  return (
-    <video ref={ref} src={heroVideo} poster={heroPoster} muted autoPlay loop playsInline preload="auto"
-      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 38%", display: "block", ...style }} />
-  );
-}
 
 // drifting neon particles
 function Stars2({ intensity = 1 }) {
@@ -84,7 +67,9 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
 
   return (
     <section id="top" className="z6-hero2">
-      <div style={{ position: "absolute", inset: 0 }}><Z6Video /></div>
+      <div style={{ position: "absolute", inset: 0 }}>
+        <LoopVideo src={heroVideo} poster={heroPoster} style={{ objectPosition: "50% 38%" }} />
+      </div>
       <div aria-hidden="true" style={{ position: "absolute", inset: 0,
         background: "linear-gradient(180deg, rgba(5,5,5,0.62) 0%, rgba(5,5,5,0.18) 42%, rgba(5,5,5,0.97) 100%)" }}></div>
       <div aria-hidden="true" style={{ position: "absolute", inset: 0, pointerEvents: "none",
@@ -97,14 +82,12 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
       <div className={"z6-hero2-meta" + (go ? " run" : "")}>
         <span>SYDNEY&nbsp; 33.87°S&nbsp;151.21°E</span>
         <span className="z6-hide-mobile">SECTOR&nbsp;06</span>
-        <span className="z6-hide-mobile">AGES&nbsp;6–19</span>
-        <span className="z6-hide-mobile" style={{ display: "inline-flex", alignItems: "center", gap: 7 }}>
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 7 }}>
           <span className="z6-rec-dot"></span>ENROLLING&nbsp;NOW
         </span>
       </div>
 
       <div className="z6-hero2-inner" ref={typeRef}>
-        <p className="z6-cond z6-hero2-kicker">School basketball program · Ages 6–19</p>
         <h1 className={"z6-display z6-hero2-h" + (go ? " run" : "")}>
           <span className="z6-h2line" style={{ ["--d"]: "0ms" }}><span className="z6-outline">OUT&nbsp;OF&nbsp;THIS</span></span>
           <span className="z6-h2line" style={{ ["--d"]: "110ms" }}><span style={{ color: "var(--z6-white)" }}>WORLD</span></span>
@@ -112,9 +95,8 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
         </h1>
         <div className={"z6-hero2-foot" + (go ? " run" : "")}>
           <p className="z6-hero2-sub">
-            <span className="z6-hero2-sub-lead">Professional coaching in schools —
-            Sydney based, NSW wide.</span>{" "}
-            Led by NBL1 pro <strong className="z6-hero2-sub-name">Gum Majak</strong>.
+            <span className="z6-hero2-sub-lead">Pro coaching in schools — Sydney based, NSW wide.</span>{" "}
+            By NBL1's <strong className="z6-hero2-sub-name">Gum Majak</strong>.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Button size="lg" onClick={() => { setCta("Book a School Program (hero)"); onNav("register"); }}>Book a School Program</Button>

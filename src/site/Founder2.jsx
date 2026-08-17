@@ -21,15 +21,11 @@ export default function Founder2() {
           <blockquote className="z6-cond z6-founder2-quote">
             “I coach like a big brother, not a teacher.”
           </blockquote>
-          <p style={{ fontSize: 17, lineHeight: 1.62, color: "var(--text-secondary)", margin: "0 0 16px", maxWidth: 560 }}>
-            Zone6 was founded by <strong style={{ color: "var(--text-primary)" }}>Gum Majak</strong> — a 6'9" forward
-            playing NBL1 East for the Hills Hornets. A CIF champion out of Crean Lutheran High in California, Gum played
-            college ball at Grayson College (Texas) and Walters State (Tennessee), developed his game in tournaments
-            across China and Malaysia, and has trained with the Sydney Kings.
-          </p>
           <p style={{ fontSize: 17, lineHeight: 1.62, color: "var(--text-secondary)", margin: "0 0 26px", maxWidth: 560 }}>
-            He started Zone6 to give Sydney kids the coaching he wished he'd had growing up — high energy, real talk,
-            and a genuine love for the game that kids feel from the first whistle.
+            Zone6 was founded by <strong style={{ color: "var(--text-primary)" }}>Gum Majak</strong> — a 6'9" forward
+            playing NBL1 East for the Hills Hornets, with a game built from California college ball to training with
+            the Sydney Kings. He started Zone6 to give Sydney kids the coaching he wished he'd had growing up —
+            high energy, real talk, and a love for the game kids feel from the first whistle.
           </p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             <Badge tone="solid">Hills Hornets · NBL1 East</Badge>

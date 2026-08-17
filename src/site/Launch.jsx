@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../ds/Button.jsx";
+import LoopVideo from "./LoopVideo.jsx";
 import { z6scroll, setCta } from "../lib/scroll.js";
 import launchSpace from "../assets/launch-space.mp4";
 import launchSpacePoster from "../assets/launch-space-poster.jpg";
@@ -10,9 +11,9 @@ import launchSpacePoster from "../assets/launch-space-poster.jpg";
 export default function Launch() {
   return (
     <section id="launch" style={{ position: "relative", overflow: "hidden", minHeight: "min(88vh, 860px)", display: "flex", alignItems: "flex-end", scrollMarginTop: 76 }}>
-      <video src={launchSpace} poster={launchSpacePoster} muted autoPlay loop playsInline preload="metadata"
+      <LoopVideo src={launchSpace} poster={launchSpacePoster} preload="metadata"
         aria-label="Basketball arena dissolving into deep space"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 42%" }} />
+        style={{ position: "absolute", inset: 0, objectPosition: "50% 42%" }} />
       <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.12) 34%, rgba(5,5,5,0.3) 62%, rgba(5,5,5,0.94) 100%)" }}></div>
       <div aria-hidden="true" className="z6-scan" style={{ position: "absolute", inset: 0, pointerEvents: "none" }}></div>
       <div style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 1320, margin: "0 auto", padding: "clamp(90px,14vh,160px) clamp(24px,5vw,72px) clamp(56px,8vh,88px)" }}>

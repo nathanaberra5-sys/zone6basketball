@@ -3,8 +3,8 @@ import Stat from "../ds/Stat.jsx";
 
 // Marquee — scrolling on-brand phrase band + stat strip.
 export default function Marquee() {
-  const phrases = ["OUT OF THIS WORLD SKILLS", "LEVEL UP", "FROM THE COURT TO THE STARS", "BUILT IN THE ZONE", "NEXT GENERATION. STARTING NOW."];
-  const row = [...phrases, ...phrases];
+  const phrases = ["FROM THE COURT TO THE STARS", "BUILT IN THE ZONE", "LEVEL UP"];
+  const row = [...phrases, ...phrases, ...phrases, ...phrases];
   return (
     <section style={{ borderTop:"1px solid var(--border-subtle)", borderBottom:"1px solid var(--border-subtle)", background:"var(--surface-sunk)" }}>
       <div style={{ overflow:"hidden", whiteSpace:"nowrap", padding:"14px 0" }}>

@@ -11,9 +11,9 @@ import cardHolidays from "../assets/card-holidays.jpg";
 // Each card leads with bespoke Zone6-universe artwork fading into the card surface.
 export default function Schedule({ onNav }) {
   const cards = [
-    { tag:"For Schools", emoji:"🏫", img:cardSchools, pos:"50% 50%", title:"School Programs", body:"We run weekly basketball development inside your school — curriculum-aligned, fully coached, all equipment supplied. Term bookings now open.", cta:"Book a School Program", to:"register" },
-    { tag:"For Players", emoji:"🏀", img:cardPlayers, pos:"50% 50%", title:"Open Sessions", body:"Weekend and after-school sessions for individual players. Drop into your age group, train with pros, and bring a friend.", cta:"Join a Session", to:"register" },
-    { tag:"School Holidays", emoji:"☀️", img:cardHolidays, pos:"50% 45%", title:"Holiday Camps", body:"Full-day camps across the holidays — skills, games, guest pros and a whole lot of energy. Spots are limited.", cta:"Reserve a Spot", to:"register" },
+    { tag:"For Schools", emoji:"🏫", img:cardSchools, pos:"50% 50%", title:"School Programs", body:"Weekly coaching inside your school — curriculum-aligned, all equipment supplied.", cta:"Book a School Program", to:"register" },
+    { tag:"For Players", emoji:"🏀", img:cardPlayers, pos:"50% 50%", title:"Open Sessions", body:"Weekend and after-school sessions — drop into your age group and train with pros.", cta:"Join a Session", to:"register" },
+    { tag:"School Holidays", emoji:"☀️", img:cardHolidays, pos:"50% 45%", title:"Holiday Camps", body:"Full-day holiday camps — skills, games and guest pros. Spots are limited.", cta:"Reserve a Spot", to:"register" },
   ];
   return (
     <section id="schedule" style={{ padding:"76px 32px", scrollMarginTop:"80px" }}>
