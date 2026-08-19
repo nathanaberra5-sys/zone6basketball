@@ -1,7 +1,9 @@
 import React from "react";
 import Button from "../ds/Button.jsx";
 import LoopVideo from "./LoopVideo.jsx";
+import IgIcon from "./IgIcon.jsx";
 import { setCta } from "../lib/scroll.js";
+import { INSTAGRAM_URL, INSTAGRAM_HANDLE } from "../config.js";
 import heroVideo from "../assets/hero-cinematic.mp4";
 import heroPoster from "../assets/hero-cinematic-poster.png";
 
@@ -85,6 +87,11 @@ export default function Hero2({ onNav, go, motion = "bold" }) {
         <span style={{ display: "inline-flex", alignItems: "center", gap: 7 }}>
           <span className="z6-rec-dot"></span>ENROLLING&nbsp;NOW
         </span>
+        <a href={INSTAGRAM_URL} target="_blank" rel="noopener" className="z6-hero2-ig"
+          aria-label={`Zone6 on Instagram — ${INSTAGRAM_HANDLE}`}>
+          <IgIcon size={15} />
+          <span className="z6-hide-mobile">{INSTAGRAM_HANDLE}</span>
+        </a>
       </div>
 
       <div className="z6-hero2-inner" ref={typeRef}>
