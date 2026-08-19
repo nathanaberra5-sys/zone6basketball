@@ -1,5 +1,7 @@
 import React from "react";
 import Badge from "../ds/Badge.jsx";
+import IgIcon from "./IgIcon.jsx";
+import { FOUNDER_INSTAGRAM_URL } from "../config.js";
 import reddamTeam from "../assets/reddam-team.jpg";
 import nebula from "../assets/nebula.jpg";
 
@@ -33,6 +35,11 @@ export default function Founder2() {
             <Badge tone="neutral">Trained w/ Sydney Kings</Badge>
             <Badge tone="neutral">6'9" Forward</Badge>
           </div>
+          <a href={FOUNDER_INSTAGRAM_URL} target="_blank" rel="noopener" className="z6-cond"
+            style={{ display: "inline-flex", alignItems: "center", gap: 9, marginTop: 24, fontWeight: 700,
+              fontSize: 13, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--text-accent)" }}>
+            <IgIcon size={16} /> Follow Gum · @gummajak
+          </a>
         </div>
       </div>
     </section>

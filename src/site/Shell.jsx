@@ -1,7 +1,9 @@
 import React from "react";
 import Wordmark from "./Wordmark.jsx";
 import Button from "../ds/Button.jsx";
+import IgIcon from "./IgIcon.jsx";
 import { setCta } from "../lib/scroll.js";
+import { INSTAGRAM_URL } from "../config.js";
 
 // Shell — top navigation: inline section links on desktop, full-screen menu on mobile.
 // A thin green scroll-progress line runs under the bar.
@@ -56,7 +58,13 @@ function MenuOverlay({ open, onClose, onNav, active }) {
         ))}
       </nav>
       <div className="z6-menu-foot">
-        <a href="tel:+61403416836" className="z6-cond" style={{ fontWeight: 600, letterSpacing: "0.12em", fontSize: 15, color: "var(--text-secondary)" }}>0403 416 836</a>
+        <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+          <a href="tel:+61403416836" className="z6-cond" style={{ fontWeight: 600, letterSpacing: "0.12em", fontSize: 15, color: "var(--text-secondary)" }}>0403 416 836</a>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener" aria-label="Zone6 on Instagram"
+            style={{ display: "inline-flex", color: "var(--text-secondary)", padding: 10, margin: -10 }}>
+            <IgIcon size={22} />
+          </a>
+        </div>
         <Button size="md" onClick={() => { setCta("Book a Spot (menu)"); go("register"); }}>Book a Spot</Button>
       </div>
     </div>

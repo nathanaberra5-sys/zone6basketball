@@ -4,7 +4,7 @@ import Card from "../ds/Card.jsx";
 import Button from "../ds/Button.jsx";
 import Input from "../ds/Input.jsx";
 import { getCta } from "../lib/scroll.js";
-import { CONTACT_EMAIL, FORM_ENDPOINT, FORM_ACCESS_KEY, PHONE_DISPLAY, PHONE_TEL } from "../config.js";
+import { CONTACT_EMAIL, FORM_ENDPOINT, FORM_ACCESS_KEY, PHONE_DISPLAY, PHONE_TEL, INSTAGRAM_URL } from "../config.js";
 
 // Register — enquiry form. Toggle between player sign-up and school booking.
 // Submissions are relayed to CONTACT_EMAIL with reply-to set to the enquirer,
@@ -120,7 +120,8 @@ export default function Register() {
         )}
       </Card>
       <p style={{ textAlign:"center", color:"var(--text-muted)", fontSize:"14px", marginTop:18 }}>
-        Prefer to talk? Call Gum on <a href={`tel:${PHONE_TEL}`} style={{ color:"var(--text-accent)" }}>{PHONE_DISPLAY}</a>.
+        Prefer to talk? Call Gum on <a href={`tel:${PHONE_TEL}`} style={{ color:"var(--text-accent)" }}>{PHONE_DISPLAY}</a> or
+        DM <a href={INSTAGRAM_URL} target="_blank" rel="noopener" style={{ color:"var(--text-accent)" }}>@z6basketball</a>.
       </p>
     </section>
   );
